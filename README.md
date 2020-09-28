@@ -78,10 +78,10 @@ Getting up and running is as easy as 1, 2, 3.
 Simply run `npm run test` and all your tests in the `test/` directory will be run.
 
 ## Heroku App URL:
-https://hellojasa-restapi.herokuapp.com/
+https://guarded-journey-00612.herokuapp.com/
 
 ## Postman API Docs:
-https://documenter.getpostman.com/view/9245591/SVzw4LVv
+https://documenter.getpostman.com/view/9245591/TVKJwtrq
 
 ## License
 

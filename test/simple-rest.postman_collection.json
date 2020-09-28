@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "http://localhost:9001/api/v2/customer/register",
+			"name": "Register",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -20,15 +20,15 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"full_name\" : \"test\",\n\t\"email\" : \"test12@mail.com\",\n\t\"password\": \"test123\",\n\t\"birthday\": \"2000-02-01\",\n\t\"phone\": \"0881271172\"\n}"
+					"raw": "{\n\t\"full_name\" : \"test\",\n\t\"email\" : \"test12@mail.com\",\n\t\"password\": \"test123\",\n\t\"birthday\": \"2000-02-01\",\n\t\"phone\": \"0881271173\"\n}"
 				},
-				"url": "http://localhost:9001/api/v2/customer/register",
+				"url": "{{url}}/customer/register",
 				"description": "endpoint-register"
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost:9001/api/v2/customer/login",
+			"name": "Login",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -41,19 +41,25 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"email\" : \"test1@mail.com\",\n\t\"password\": \"test123\"\n}"
+					"raw": "{\n\t\"email\" : \"test13@mail.com\",\n\t\"password\": \"test123\"\n}"
 				},
-				"url": "http://localhost:9001/api/v2/customer/login",
+				"url": "{{ur}}/customer/login",
 				"description": "endpoint-login"
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost:9001/api/v2/customer/profile/1",
+			"name": "Detail Profil",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{token}}"
+					}
+				},
 				"method": "GET",
 				"header": [
 					{
@@ -72,17 +78,23 @@
 					"mode": "raw",
 					"raw": ""
 				},
-				"url": "http://localhost:9001/api/v2/customer/profile/1",
+				"url": "{{url}}/customer/profile/1",
 				"description": "endpoint get user by id"
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost:9001/api/v2/customer/profile",
+			"name": "List Profil",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{token}}"
+					}
+				},
 				"method": "GET",
 				"header": [
 					{
@@ -101,7 +113,7 @@
 					"mode": "raw",
 					"raw": ""
 				},
-				"url": "http://localhost:9001/api/v2/customer/profile",
+				"url": "{{url}}/customer/profile",
 				"description": "endpoit get all users"
 			},
 			"response": []
