@@ -6,7 +6,7 @@
 
 ## Main Tech stacks
 
-    * MySql as main database engine
+    * MySql | Postgre as main database engine
     * NodeJS as server runner
     * Express as server framework
     mobile use general REST API)
