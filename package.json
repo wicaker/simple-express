@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node_modules/.bin/nodemon --exec node src/",
+    "start:dev": "node_modules/.bin/nodemon --exec node src/",
     "test": "npm run mocha",
     "mocha": "node_modules/.bin/mocha test/ --recursive --exit"
   },
