@@ -14,15 +14,18 @@ const productPurchaseService = {
   create: async (req, res) => {
     const { product_id, paymentType } = req.body;
 
+
     try { 
-      const product = await Product.findOne({where : { id : id}});
+      const product = await Product.findOne({where : { id : product_id}});
       if (!product) {
         return res.status(400).json(response(false, 'Product not found!'));
       }
+
+      console.log("product", )
         const payload = {
           product_id: product.id,
           charge: product.price,
-          user_id: user.id,
+          // user_id: user.id,
           paymentType: paymentType,
         };
         const productPurchase = await ProductPurchase.create(payload);
