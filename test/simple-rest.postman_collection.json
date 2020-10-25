@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "28f4ec2b-e27b-4062-a9e2-9dfff2145039",
+		"_postman_id": "f643b9f3-55d3-4d69-9fe0-1d3945e0c63c",
 		"name": "simple-rest",
 		"description": "document rest-api",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
@@ -115,6 +115,21 @@
 				},
 				"url": "{{url}}/customer/profile",
 				"description": "endpoit get all users"
+			},
+			"response": []
+		},
+		{
+			"name": "Product Purchase",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{token}}"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"url": "{{url}}/customer/purchase"
 			},
 			"response": []
 		}
